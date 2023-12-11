@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FirstClass</title>
+  <style>
+    body {
+      background-color: #010D0B;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #video-bg {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+
+    #content {
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 50%; /* Ensure the image does not exceed its container */
+      border-radius: 7px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.1);
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="video-bg">
+    <source src="background-video.mp4" type="video/mp4">
+  </video>
+  <div id="content">
+    <img src="ifykyk-removebg-preview.png">
+    <p>If you know, you know.</p>
+    <button onclick="redirectToLink()">Get in touch</button>
+  </div>
+
+  <script>
+    function redirectToLink() {
+      // Replace 'your-link-here' with the actual link you want to redirect to
+      window.location.href = 'https://t.me/CrypticDevs';
+    }
+  </script>
+</body>
+</html>
